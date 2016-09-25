@@ -30,7 +30,7 @@ class SignatureForm(forms.ModelForm):
             self.fields['newsletter'].required = False
 
         self.helper = FormHelper(self)
-        self.helper.add_input(Submit('action', _("Sign"), css_class="btn-warning"))
+        self.helper.add_input(Submit('action', _("Sign"), css_class="btn-success btn-block"))
         self.helper.form_action = reverse('signatures:form',
                                           kwargs={'slug': self.petition.slug})
 
